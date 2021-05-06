@@ -2,38 +2,59 @@
  * @NOTE: Prepend a `~` to css file paths that are in your node_modules
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 body {
   position: relative;
-  color: white;
+  color: #444;
   height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
-  font-family: sans-serif;
+  background: white;
+  font-family: 'Noto Sans JP', sans-serif;
   overflow-y: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
-
+h1 {
+  text-align: center;
+}
+h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  color: #aaa;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
 button {
   background-color: white;
   padding: 10px 20px;
+  margin: 10px;
   border-radius: 10px;
   border: none;
+  min-width: 160px;
   appearance: none;
   font-size: 1.3rem;
   box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
     0px 18px 88px -4px rgba(24, 39, 75, 0.14);
   transition: transform ease-in 0.1s;
-  cursor: pointer;
+}
+button.working-true {
+  background-color: rgb(22, 134, 0);
+}
+button.working-false {
+  background-color: rgb(172, 0, 0);
+}
+button:hover,
+button:focus {
+  transform: scale(1.1);
 }
 
-button:hover {
-  transform: scale(1.05);
+p {
+  font-size: 24px;
 }
 
 li {
@@ -41,20 +62,33 @@ li {
 }
 
 a {
+  color: white;
+  opacity: 0.75;
   text-decoration: none;
-  height: fit-content;
-  width: fit-content;
-  margin: 10px;
 }
 
 a:hover {
   opacity: 1;
   text-decoration: none;
+  cursor: pointer;
 }
-
+.names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 36px;
+}
+.logger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 36px;
+}
 .Hello {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 48px 0 36px;
 }
